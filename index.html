@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Alles Gute zum Geburtstag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #1b1b2f, #2f2f5a, #1b1b2f);
+            background-size: 400% 400%;
+            animation: bgMove 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: #ffffff;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(10px);
+            padding: 35px 30px;
+            border-radius: 20px;
+            max-width: 440px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            animation: fadeUp 1.2s ease forwards;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4em;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 1.05em;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        .quote {
+            font-style: italic;
+            opacity: 0.85;
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 28px;
+            font-size: 0.8em;
+            opacity: 0.6;
+        }
+
+        .card:hover {
+            transform: scale(1.015);
+            transition: transform 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Alles Gute zum Geburtstag 🎉</h1>
+
+        <p>
+            Lieber Papa,<br><br>
+            ich wünsche dir von Herzen alles Gute,
+            viel Gesundheit, Glück und viele schöne Momente.
+            Danke für alles, was du für mich tust.
+        </p>
+
+        <p class="quote">
+            „Die besten Dinge im Leben kann man nicht kaufen.“
+        </p>
+
+        <footer>
+            Quellen: ChatGPT<br>
+            Ersteller: Nikolas
+        </footer>
+    </div>
+
+</body>
+</html>
