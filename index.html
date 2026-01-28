@@ -5,7 +5,6 @@
     <title>Alles Gute zum Geburtstag</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 
     <style>
@@ -69,12 +68,12 @@
         .btn {
             margin-top: 18px;
             padding: 12px 22px;
-            border: none;
             border-radius: 30px;
-            background: #ffffff;
+            background: white;
             color: #1b1b2f;
             font-size: 0.95em;
-            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
@@ -87,47 +86,6 @@
             margin-top: 26px;
             font-size: 0.8em;
             opacity: 0.6;
-        }
-
-        /* Overlay */
-        .overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.7);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-        }
-
-        .overlay.active {
-            display: flex;
-        }
-
-        .overlay-box {
-            background: #1f1f3a;
-            padding: 30px;
-            border-radius: 18px;
-            max-width: 380px;
-            text-align: center;
-            animation: pop 0.4s ease;
-        }
-
-        @keyframes pop {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .overlay-box h2 {
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .close {
-            margin-top: 18px;
-            font-size: 0.85em;
-            opacity: 0.7;
-            cursor: pointer;
         }
     </style>
 </head>
@@ -147,35 +105,13 @@
             „Die besten Dinge im Leben kann man nicht kaufen.“
         </p>
 
-        <button class="btn" onclick="openOverlay()">🎁 Geschenk kommt bald</button>
+        <a class="btn" href="geschenk.html">🎁 Geschenk abholen</a>
 
         <footer>
             Quellen: ChatGPT<br>
             Ersteller: Nikolas
         </footer>
     </div>
-
-    <!-- Overlay -->
-    <div class="overlay" id="overlay">
-        <div class="overlay-box">
-            <h2>🚧 Under Construction</h2>
-            <p>
-                Hier entsteht gerade dein Geschenk.<br>
-                Außerdem kommt noch ein kleines Spiel dazu.
-            </p>
-            <div class="close" onclick="closeOverlay()">Schließen</div>
-        </div>
-    </div>
-
-    <script>
-        function openOverlay() {
-            document.getElementById("overlay").classList.add("active");
-        }
-
-        function closeOverlay() {
-            document.getElementById("overlay").classList.remove("active");
-        }
-    </script>
 
 </body>
 </html>
