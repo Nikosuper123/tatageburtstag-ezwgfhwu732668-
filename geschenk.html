@@ -138,7 +138,7 @@ input {
 
 <script>
 // 🔐 PASSWORT HIER ÄNDERN
-const PASSWORD = "Papa2026";
+const PASSWORD = "PAPA2026";
 
 document.getElementById("passwordScreen").style.display = "block";
 
@@ -236,8 +236,15 @@ function win(){
 }
 
 function startTimer(){
-  timer=setInterval(()=>{timeLeft--;updateTimer();if(timeLeft<=0)location.reload();},1000);
+  timer = setInterval(()=>{
+    timeLeft--;
+    updateTimer();
+    if(timeLeft <= 0){
+      lose();
+    }
+  },1000);
 }
+
 
 function updateTimer(){
   timerEl.textContent="⏱ "+timeLeft+"s";
@@ -248,6 +255,21 @@ function copyCode(){
   navigator.clipboard.writeText(code.innerText);
   alert("Code kopiert!");
 }
+
+function lose(){
+  clearInterval(timer);
+
+  const sound = document.getElementById("loseSound");
+  sound.currentTime = 0;
+  sound.play();
+
+  lock = true;
+
+  setTimeout(()=>{
+    startLevel(); // NUR Level neu starten
+  }, 2000);
+}
+
 
 const timerEl=document.getElementById("timer");
 const video=document.getElementById("video");
